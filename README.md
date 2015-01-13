@@ -12,6 +12,11 @@ first or the installation and update scripts will not work.
 
 Suggested Git Version >= 5
 
+Also this code and config files have to be Git cloned. Downloading them
+from the zip file may not work. You can use the command.
+
+	$ git clone git@github.com:nkgokul/drupal7-skeleton.git project_folder_name
+
 #### Create config file
 
 Copy the example configuration file to config.sh:
