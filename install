@@ -140,13 +140,16 @@ install_drupal_profile
 # Setup the files directory.
 create_sites_default_files_directory
 
+# Setup the modules directories
+create_sites_all_modules_directories
+
 # Enable the development modules.
 enable_development_modules
 
 # Load demo content if required.
-if [ $DEMO_CONTENT ]; then
-  import_demo_content
-fi
+#if [ $DEMO_CONTENT ]; then
+#  import_demo_content
+#fi
 
 # Run post script (if any).
 run_post_script "install"
@@ -185,5 +188,5 @@ fi
 
 
 # DONE!
-echo "A new website has been created for you. The username is $ADMIN_USERNAME and the password is $ADMIN_PASSWORD" | mail -s "A new Drupal Instance has been created" nkgokul@gmail.com.com
+echo "A new website has been created for you. The username is $ADMIN_USERNAME and the password is $ADMIN_PASSWORD" | mail -s "A new Drupal Instance has been created" nkgokul@gmail.com
 exit 0

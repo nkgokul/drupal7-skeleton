@@ -222,6 +222,36 @@ function create_sites_default_files_directory {
   echo
 }
 
+##
+# Create (if not exists) and set the proper file permissions
+# on the sites/all/modules directory.
+##
+function create_sites_all_modules_directories {
+  if [ ! -d $ROOT/www/sites/all/modules/contrib ]; then
+    echo -e "${LBLUE}> Create the files directory (sites/all/modules/contrib directory)${RESTORE}"
+    mkdir -p $ROOT/www/sites/all/modules/contrib
+  fi
+
+  echo -e "${LBLUE}> Set the file permissions on the sites/default/files directory${RESTORE}"
+  chmod -R 755 $ROOT/www/sites/all/modules/contrib
+  umask 000 $ROOT/www/sites/all/modules/contrib
+  chmod -R g+s $ROOT/www/sites/all/modules/contrib
+  echo
+
+  if [ ! -d $ROOT/www/sites/all/modules/custom ]; then
+    echo -e "${LBLUE}> Create the files directory (sites/all/modules/custom directory)${RESTORE}"
+    mkdir -p $ROOT/www/sites/all/modules/custom
+  fi
+
+  echo -e "${LBLUE}> Set the file permissions on the sites/default/files directory${RESTORE}"
+  chmod -R 755 $ROOT/www/sites/all/modules/custom
+  umask 000 $ROOT/www/sites/all/modules/custom
+  chmod -R g+s $ROOT/www/sites/all/modules/custom
+  echo
+
+}
+
+
 
 ##
 # Enable the development modules.
