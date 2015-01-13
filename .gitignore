@@ -20,6 +20,11 @@
 *.tar
 *.zip
 
+# Temp Files #
+############
+*~
+
+
 # Logs and databases #
 ######################
 *.log

@@ -229,7 +229,7 @@ function create_sites_default_files_directory {
 function enable_development_modules {
   echo -e "${LBLUE}> Enabling the development modules${RESTORE}"
   cd $ROOT/www
-  drush en -y devel views_ui field_ui context_ui ckeditor eazylaunch
+  drush en -y devel views_ui field_ui context_ui ckeditor eazylaunch chosen
   cd $ROOT
   echo
 }
