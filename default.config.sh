@@ -27,10 +27,10 @@ ADMIN_EMAIL=""
 
 
 # Modify the MySQL settings below so they will match your own.
-MYSQL_USERNAME=""
-MYSQL_PASSWORD=""
 MYSQL_HOSTNAME=""
+MYSQL_USERNAME=""
 MYSQL_DB_NAME=""
+MYSQL_PASSWORD=""
 
 
 
